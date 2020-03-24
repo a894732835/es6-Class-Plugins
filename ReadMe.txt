@@ -41,3 +41,20 @@ console.log(json);
 (2)getCurrentDate()获取当前日期，返回值类型 yyyy年mm月dd日 week
 (3)getCurrentTime()获取当前时间，返回值类型 hh:mm:ss
 (4)getAllCurrentDate()获取当前日期时间，返回值类型 yyyy-mm-dd hh:mm:ss week
+使用方式例：console.log(new currentDate().getAllCurrentDate());
+4.formCheck
+数据验证：
+所需参数：{'a':' value'，'b':'  ',c:''}//key:要验证的参数名，value:要验证的参数值
+内置方法：
+(1)check()对数据进行非空校验，返回所有值为空的key名[]，返回类型数组
+使用方式例：console.log(new formCheck(arr).check()+'不能为空');//console.log(['b','c']);
+5.fontRoll
+文字横向滚动
+所需参数：_id:包裹id(字符串'id'),_class:文字class名(字符串'class'),_speed:滚动速度(Number型，默认为50)
+内置方法：
+(1)init()初始化方法，内含是否开启滚动校验，以及触发事件绑定
+(2)isScoll()校验是否开启滚动
+(3)marquee()定时器开启
+(4)mouseover()鼠标移入关闭定时器
+(5)mouseout()鼠标移出开启定时器
+使用方式例：new fontRoll('txt-scroll','aaa',50);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#txt-scroll{
+				margin: 20px;
+				width: 1000px;
+				background: yellow;
+				height: 50px;
+				border: 2px solid #FF0000;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+			.aaa{
+				width: 300px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="txt-scroll">
+			<span class="aaa" style="padding-right: 50px;">asdasd</span>
+			<span class="aaa" style="padding-right: 50px;">123</span>
+			<span class="aaa" style="margin-right: 50px;">456</span>
+			<span class="aaa" style="margin-right: 50px;">789</span>
+			<span class="aaa" style="margin-right: 50px;">阿三大苏打实打实大大是</span>
+		</div>
+		<script type="module">
+			import {fontRoll} from './js/fontRoll.js';
+			new fontRoll('txt-scroll','aaa',1);
+		</script>
+	</body>
+</html>
