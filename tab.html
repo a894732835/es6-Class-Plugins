@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.tabtitle{
+				width: 50px;
+				height: 30px;
+				background: #ddd;
+				border: 1px solid #e9e9e9;
+				display: inline-block;
+			}
+			.tabtitle.active{
+				background: #ff0000;
+			}
+			.detail{
+				width: 500px;
+				height: 500px;
+				background: #f1f1f2;
+				display: none;
+			}
+			.detail.active{
+				display: block;
+			}
+		</style>
+	</head>
+	<div>
+		<div id="tab">
+			<span class="tabtitle active">1</span>
+			<span class="tabtitle">2</span>
+			<span class="tabtitle">3</span>
+			<div class="detail active">1</div>
+			<div class="detail">2</div>
+			<div class="detail">3</div>
+		</div>
+		<div id="tab2">
+			<span class="tabtitle active">1</span>
+			<span class="tabtitle">2</span>
+			<span class="tabtitle">3</span>
+			<div class="detail active">1</div>
+			<div class="detail">2</div>
+			<div class="detail">3</div>
+		</div>
+	</div>
+	<script type="module">
+		import {tab} from './js/tab.js';
+		console.log(new tab('tab','tabtitle','detail','active'));
+		new tab('tab2','tabtitle','detail','active','autoPlay');
+	</script>
+	<body>
+	</body>
+</html>

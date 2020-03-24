@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+		<script type="module">
+			import {treeData} from './js/treeData.js';
+			var jsons = [
+					{
+						"parentChannelId":"",
+						"level":"2",
+						"channelName":"\u4E00\u7EA7\u680F\u76EE1",
+						"channelId":"379b2622-34c6-450c-a3ce-f415d2db3bac"
+					},
+					{
+						"parentChannelId":"379b2622-34c6-450c-a3ce-f415d2db3bac",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE1",
+						"channelId":"fe45381d-917a-4750-ba1f-35b27525fabc"
+					},
+					{
+						"parentChannelId":"fe45381d-917a-4750-ba1f-35b27525fabc",
+						"level":"4",
+						"channelName":"\u4E09\u7EA7\u680F\u76EE1",
+						"channelId":"f0948d6f-fbe9-46eb-ba9c-6139e76bd593"
+					},
+					{
+						"parentChannelId":"f0948d6f-fbe9-46eb-ba9c-6139e76bd593",
+						"level":"5",
+						"channelName":"\u56DB\u7EA7\u680F\u76EE1",
+						"channelId":"14b6947b-5b20-481b-843e-e3920ac906bd"
+					},
+					{
+						"parentChannelId":"14b6947b-5b20-481b-843e-e3920ac906bd",
+						"level":"6",
+						"channelName":"\u4E94\u7EA7\u680F\u76EE1",
+						"channelId":"38d8b0c2-fa88-4e41-891c-4e14c764c942"
+					},
+					{
+						"parentChannelId":"",
+						"level":"2",
+						"channelName":"\u4E00\u7EA7\u680F\u76EE2",
+						"channelId":"3c46418d-d279-49e4-83e2-bdfbb7269efe"
+					},
+					{
+						"parentChannelId":"3c46418d-d279-49e4-83e2-bdfbb7269efe",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE2",
+						"channelId":"d7538996-d4ff-45b9-9db1-68f56aa46a80"
+					},
+					{
+						"parentChannelId":"d7538996-d4ff-45b9-9db1-68f56aa46a80",
+						"level":"4",
+						"channelName":"\u4E09\u7EA7\u680F\u76EE2",
+						"channelId":"eb31531e-261c-4100-a2cd-870dde1b6b39"
+					},
+					{
+						"parentChannelId":"3c46418d-d279-49e4-83e2-bdfbb7269efe",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE3",
+						"channelId":"804b6355-9d12-4e1f-bd3d-b3004d03257e"
+					},
+					{
+						"parentChannelId":"804b6355-9d12-4e1f-bd3d-b3004d03257e",
+						"level":"4",
+						"channelName":"\u4E09\u7EA7\u680F\u76EE3",
+						"channelId":"51b995dc-dbea-4ad2-bca3-b9953d95cc1c"
+					},
+					{
+						"parentChannelId":"",
+						"level":"2",
+						"channelName":"\u4E09\u7EA7\u680F\u76EE1",
+						"channelId":"4a4339fb-a859-423f-b553-cf58120b9fb5"
+					},
+					{
+						"parentChannelId":"4a4339fb-a859-423f-b553-cf58120b9fb5",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE4",
+						"channelId":"fe704e1c-0f54-4b2c-8fec-6d5b3e771d21"
+					},
+					{
+						"parentChannelId":"4a4339fb-a859-423f-b553-cf58120b9fb5",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE5",
+						"channelId":"545ef3c8-f5d4-43bd-b95f-4c929d7bd526"
+					},
+					{
+						"parentChannelId":"4a4339fb-a859-423f-b553-cf58120b9fb5",
+						"level":"3",
+						"channelName":"\u4E8C\u7EA7\u680F\u76EE6",
+						"channelId":"c8e7c7c0-4896-44a1-bdc6-89f03e35ba26"
+					}
+				]
+				var keyMap = {
+				    "channelName" : "name",
+					"channelId" : "id"
+				};
+				var jsonss=new treeData(jsons,'parentChannelId','channelId','children',keyMap).getTreeDate();
+				console.log(jsonss);
+		</script>
+	<body>
+	</body>
+</html>

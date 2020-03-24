@@ -1,5 +1,3 @@
-# es6-Class
-es6小型类库
 1.tab.js
 页签切换插件；
 所需参数：id:父级id(字符串'id')；title:id下title类名(字符串'title')，detaile:要展示的详情类名(字符串'detail')，acitve:激活class(字符串'active'),type:类型，选填默认为'click'(字符串'click','hover','autoPlay'),time:时间(Number型，默认为1000)
