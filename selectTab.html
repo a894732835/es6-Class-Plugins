@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html,body, ul, li, p, input {
+			    margin: 0;
+			    padding: 0;
+			    font-family: "微软雅黑","Microsoft YaHei";
+			}
+			li {
+			    list-style: none;
+			}
+			a {
+			    cursor: pointer;
+			    text-decoration: none;
+			}
+			#select{
+				width: 200px;
+				height: 35px;
+				line-height: 35px;
+				border: 1px solid #DDDDDD;
+				padding: 0 5px;
+			}
+			.active{
+				background: #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="select">
+			<option value="1">请选择</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<select id="select1" style="border: 1px solid;">
+			<option value="1">请选择</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<div>123</div>
+		<script type="module">
+			import {selectTab} from './js/selectTab.js';
+			const a = new selectTab('select','active','check');
+			a.setCheckValue([{"name":"2","value":"2"},{"name":"3","value":"3"},{"name":"4","value":"4"}]);
+			const b = new selectTab('select1','active');
+			b.setSingleValue(3,'3');
+			document.onclick=function(){
+				console.log(a.getValue()+' : '+b.getValue())
+			}
+		</script>
+	</body>
+</html>

@@ -58,3 +58,22 @@ console.log(json);
 (4)mouseover()鼠标移入关闭定时器
 (5)mouseout()鼠标移出开启定时器
 使用方式例：new fontRoll('txt-scroll','aaa',50);
+6.selectTab
+自定义下拉框
+所需参数：_id:select的id(字符串'id'),_class:选中状态类名(字符串'class'),type:类型(字符串,默认单选，'single','check'),_height:下拉框最大高度(Number型，默认为200)
+内置方法：
+(1)init()初始化方法，生成自定义下拉框，以<div><div><ul><li>结构
+(2)insertAfter()在页面中插入节点
+(3)HandleClick()事件绑定方法，点击显示隐藏，点击其他地方关闭下拉
+(3)singleHandleClick()单选事件绑定方法，点击li施加选中，点击其他关闭下拉框
+(3)checkHandleClick()多选事件绑定方法，点击li施加选中或取消选中
+(4)removeAllClass()移除活跃li的active
+(5)newGuid()生成随机值
+(6)getValue()获取选中值
+(7)setSingleValue(val,name)单选中设定选中值，所需参数val:值，name：对应名称
+(8)setCheckValue(arr)多选中设定选中值，所需参数arr为数组对象，例如arr=[{"name":"2","value":"2"},{"name":"3","value":"3"},{"name":"4","value":"4"}];
+使用方式例：const a = new selectTab('select','active','check');
+			a.setCheckValue([{"name":"2","value":"2"},{"name":"3","value":"3"},{"name":"4","value":"4"}]);
+			const b = new selectTab('select1','active');
+			b.setSingleValue(3,'3');
+			console.log(a.getValue());
